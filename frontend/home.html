@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Annotation Tool</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <nav aria-label="breadcrumb" >
+          <ol class="breadcrumb" style="background-color: midnightblue" >
+            <li class="breadcrumb-item" ><a href="#" style="color: white">Home</a></li>
+          </ol>
+        </nav>
+        <div class="container" style="padding: 2rem">
+
+            <div class="form-row" style="width: 15rem">
+                <label for="category">Choose Category</label>
+            </div>
+
+            <div class="form-row" style="width: 15rem">
+                <div  style="width:80%;">
+                    <select class="form-control" id="category">
+                    </select>
+                </div><div style="width:10%;">
+                </div><div style="width:10%;">
+                    <button href="#" onclick="sendCategory()" style="border-radius: 50%;">></button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <footer style="background-color: midnightblue; padding: 3px" >
+            <p></p>
+            <!-- <p style="color: white">&copy; Copyright 2019 by Serena Giachetti.</p> -->
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="static/js/home.js"></script>
+    </body>
+</html>

@@ -5,8 +5,9 @@ import json
 
 def get_boundaries(segments_quick, width, height):
     blank_image = np.zeros((height, width, 3), np.uint8)
-    blank_image[:, 0:width // 2] = (255, 255, 255)  # (B, G, R)
-    blank_image[:, width // 2:width] = (255, 255, 255)
+    blank_image[:] = (255, 255, 255)
+    # blank_image[:, 0:width // 2] = (255, 255, 255)  # (B, G, R)
+    # blank_image[:, width // 2:width] = (255, 255, 255)
 
     marked_bound = mark_boundaries(blank_image, segments_quick, color=(0, 0, 0)).astype(int);
 

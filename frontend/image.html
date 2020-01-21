@@ -15,7 +15,7 @@
 
         <nav aria-label="breadcrumb" >
           <ol class="breadcrumb" style="background-color: midnightblue" >
-            <li class="breadcrumb-item" ><a href="images_list.html" style="color: white">Home</a></li>
+            <li class="breadcrumb-item" ><a href="home.html" style="color: white">Home</a></li>
               <li class="breadcrumb-item"><a href="#" style="color: white">Image</a></li>
           </ol>
         </nav>
@@ -29,10 +29,13 @@
                             <canvas id="background_canvas" style="z-index: 1;position:absolute;left:0px;top:0px;">
                                 Sorry, your browser doesn't support the &lt;canvas&gt; element.
                             </canvas>
-                            <canvas id="middle-canvas" style="z-index: 2;position:absolute;left:0px;top:0px;b">
+                            <canvas id="middle-canvas" style="z-index: 2;position:absolute;left:0px;top:0px;">
                                 Sorry, your browser doesn't support the &lt;canvas&gt; element.
                             </canvas>
-                            <canvas id="outline-canvas" style="z-index: 3;position:absolute;left:0px;top:0px;">
+                            <canvas id="outline-canvas" style="z-index: 3;position:absolute;left:0px;top:0px;" >
+                                Sorry, your browser doesn't support the &lt;canvas&gt; element.
+                            </canvas>
+                             <canvas id="top-canvas" style="z-index: 3;position:absolute;left:0px;top:0px;" draggable="true" >
                                 Sorry, your browser doesn't support the &lt;canvas&gt; element.
                             </canvas>
                         </div>
@@ -63,31 +66,75 @@
                         <div>
                             <div class="form-row" style="width: 15rem">
                                 <label for="opacity">Opacity:</label>
-                                <input type="range" id="opacity" class="form-control-range" min="0" max="100" step="10" >
+                                <datalist id="rate">
+                                  <option value="0"></option>
+                                  <option value="10"></option>
+                                  <option value="20"></option>
+                                  <option value="30"></option>
+                                  <option value="40"></option>
+                                  <option value="50"></option>
+                                  <option value="60"></option>
+                                  <option value="70"></option>
+                                  <option value="80"></option>
+                                  <option value="90"></option>
+                                  <option value="100"></option>
+                                </datalist>
+                            </div>
+                            <div class="form-row" style="width: 15rem">
+                                <div class="col-9">
+                                    <input type="range" id="opacity"
+                                       class="form-control-range" min="0" max="100" step="10"
+                                       list="rate" onchange="changeOpacity(this.id, 'mask_op_value')">
+                                </div> <div class="col">
+                                    <input type="text" id="mask_op_value" disabled value="50%" size="4">
+                                </div>
                             </div>
                             <br>
-                            <label for="mask_color">Color:</label>
-                            <input type="color" id="mask_color" value="#000000">
-                            <button href="#" onclick="displayMask()" >Display Mask</button>
+                            <div class="form-row" style="width: 15rem">
+                                <div class="col">
+                                    <label for="mask_color">Color:</label>
+                                    <input type="color" id="mask_color" value="#000000">
+                                </div> <div class="col">
+                                    <button href="#" onclick="redrawMask()" >Display Mask</button>
+                                </div>
+                            </div>
+
                         </div>
 
                         <br><br>
 
                         <div>
                             <h3>Annotations:</h3>
-                            <div class="form-row" style="width: 15rem;">
+
+                            <div class="form-row" style="width: 15rem">
                                 <label for="ann_opacity">Opacity:</label>
-                                <input type="range" id="ann_opacity" class="form-control-range" min="0" max="100" step="10" >
+                            </div>
+                            <div class="form-row" style="width: 15rem">
+                                <div  style="width:80%;">
+                                    <input type="range" id="ann_opacity"
+                                       class="form-control-range" min="0" max="100" step="10"
+                                       list="rate" onchange="changeOpacity(this.id, 'ann_op_value')">
+                                </div><div style="width:10%;">
+                                </div><div style="width:10%;">
+                                    <input type="text" id="ann_op_value" disabled value="50%" size="4">
+                                </div>
                             </div>
                             <br>
                             <div class="form-row" style="width: 20rem;">
-                                <input type="color" id="ann_color" value="#ff0000">
-                                <input type="text" placeholder="Annotation Name">
+                                <div style="width:20%;">
+                                    <input type="color" id="ann_color" value="#ff0000">
+                                </div> <div style="width:50%;">
+                                    <select id="category" style="width:100%;">
+
+                                    </select>
+                                </div> <div style="width:2%;"> </div>
+                                <div style="width:10%;">
+                                    <button href="#" onclick="saveAnnotation()" >V</button>
+                                </div><div style="width:10%;">
+                                    <button href="#" onclick="cancelAnnotation()" >X</button>
+                                </div>
                             </div>
-                            <div class="form-row" style="width: 20rem">
-                                <input type="submit" value="Save">
-                                <input type="submit" value="Cancel">
-                            </div>
+                            <br><br>
 
                         </div>
 
@@ -95,8 +142,17 @@
 
                     </div>
 
-                    <div class="col" id="annotations" >
+                    <div class="col">
                         <p>Qui si vedranno le annotazioni salvate</p>
+                        <form id = "check_form">
+
+
+                        </form>
+
+                        <div class="form-row" hidden id ="ann_button" style="width: 20rem;">
+                            <button href="#" id="edit_ann" onclick="editAnnotation()" >Edit</button>
+                            <button href="#" id="del_ann" onclick="delAnnotation()" >Delete</button>
+                        </div>
 
                     </div>
                 </div>
@@ -116,5 +172,7 @@
         <script src="static/js/bootstrap.min.js"></script>
 
         <script type="text/javascript" src="static/js/image.js"></script>
+        <script type="text/javascript" src="static/js/mask.js"></script>
+        <script type="text/javascript" src="static/js/annotation_list.js"></script>
     </body>
 </html>

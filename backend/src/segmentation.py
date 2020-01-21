@@ -6,7 +6,9 @@ import json
 
 
 def segment_image(image_name, ratio=0.5, kernel_size=2, max_dist=10):
-    image = mpimg.imread(os.path.join('src/static/img', image_name))
+    path = 'src/' + image_name
+    image = mpimg.imread(path)
+    # image = mpimg.imread(os.path.join('src/static/img', image_name))
     img = img_as_float(image)
 
     # !!! Source image colorspace should be RGB to allow RGB2LAB conversion
