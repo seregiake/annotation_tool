@@ -7,15 +7,11 @@ let image_id,
     curLoadResNum = 0,
     superclass_id;
 
-let user_id = 1;
+let user_id;
 
 window.onload = function () {
 
-    //prendere user_id dall'autenticazione
-
     init();
-
-    initMask();
 
     // initAnnotation();
 
@@ -78,8 +74,11 @@ window.onload = function () {
 
 function init(){
     // extracts the image id from the url
+    // let url_string = window.location.href;
+    // let url = new URL(url_string);
     let url_string = window.location.href;
     let url = new URL(url_string);
+    user_id = url.searchParams.get("u");
     image_id = url.searchParams.get("i");
     superclass_id = url.searchParams.get("s");
 
@@ -107,6 +106,9 @@ function init(){
                 ctx.drawImage(backgroundImage, 0, 0);
             }
             curLoadResNum ++;
+
+            displayCategories();
+            initMask();
         }
     ).error(function(jqXHR, textStatus, errorThrown) {
 
@@ -116,7 +118,7 @@ function init(){
 
     });
 
-    displayCategories();
+
 
 }
 

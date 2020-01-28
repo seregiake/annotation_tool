@@ -3,18 +3,35 @@ window.onload = function () {
 }
 
 let superclass_id,
-    dataset_name;
+    dataset_name,
+    user_id,
+    task;
 
 function displayList(){
     let url_string = window.location.href;
     let url = new URL(url_string);
-    let superclass = url.searchParams.get("s");
-    superclass_id = superclass;
-    dataset_name = url.searchParams.get("d");
 
-    console.log(dataset_name);
-    console.log(superclass_id);
+    user_id = url.searchParams.get("u");
+    task = url.searchParams.get("t");
 
+
+    $.getJSON(
+        'http://localhost:5000/tasks/' + task, function (data) {
+            console.log(data);
+
+            superclass_id = data['super_id'];
+            dataset_name = data['folder_name'];
+
+            getImages();
+
+
+        }
+    );
+
+
+}
+
+function getImages(){
     $.getJSON(
         'http://localhost:5000/images', function (data) {
             console.log(data);
@@ -29,7 +46,7 @@ function displayList(){
                     let a = document.createElement('a');
                     // a.href=data.IMAGES[i].url;
                     // fare in modo che quando clicco fne javascript chiama pagina image.html passando id giusto
-                    a.href="image.html?i=" + data[i].id +'&s=' + superclass_id;
+                    a.href="image.html?i=" + data[i].id +'&s=' + superclass_id + '&u=' + user_id ;
                     let img = createImg(data[i].url, data[i].name,"card-img-top");
                     a.appendChild(img);
                     card.appendChild(a);

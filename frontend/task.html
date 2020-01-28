@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#" style="color: white">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#" style="color: white" id="home">Home <span class="sr-only">(current)</span></a>
                     </li>
 
                      <li class="nav-item active">
@@ -40,6 +40,8 @@
         <div class="container" style="padding: 2rem; height: 600px; align-content: center;">
             <div class="d-flex justify-content-center h-100" style="width:100%;align-items: center;">
                 <div>
+
+                    <!--
                     <label for="dataset">Choose dataset:</label>
                     <div class="form-row" style="width:80%;">
                         <div  style="width:80%;">
@@ -51,16 +53,15 @@
                         </div>
                     </div>
                     <br><br>
-                    <label for="superclass">Choose class of annotations:</label>
+                    -->
+
+                    <label for="superclass">Choose one task:</label>
                     <div class="form-row" style="width:80%;">
-                    <div  style="width:80%;">
-                        <select class="form-control" id="superclass">
-                        </select>
-                    </div><div style="width:5%;">
-                    </div><div style="width:10%;">
+
+                        <select class="form-control" id="superclass"> </select>
                         <button href="#" onclick="sendCategory()" style="border-radius: 50%;">></button>
+
                     </div>
-                </div>
                 </div>
             </div>
 

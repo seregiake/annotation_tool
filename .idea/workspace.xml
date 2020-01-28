@@ -2,78 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/signin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/js/task.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/task.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/annotation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/boundaries.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/create_ann.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/create_mask.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/data/annotations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/data/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/data/images.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/data/masks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/data/users.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/mask.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/segmentation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/01HUMANE-articleLarge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/110964876.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/abbandono-cani-gatti-conigli-pesci.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/animali-nella-fattoria.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/bfe0bffdbcad85598a18f6d40ac983a5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/cavallo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/ea2cf4bc-da85-485b-b136-49219f7768ff.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/farm-animals-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/farm-animals.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/huhn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/smallpets.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/stock_shelburne_farms_burlington_vermont_2017aug13_0132banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/4923.fruit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/come-fare-maturare-frutta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/fruit_selection_155265101_web.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/fruits_feature.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/image.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/zuccheri_frutta_salute.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/310px-Řím,_autobusy_a_motorky_na_semaforu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/Citt-moderna-strada-strada-trafficata-studio-fotografico-sfondi-bambini-del-bambino-foto-di-sfondo-sfondo-fotografia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/autobus-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/copertina.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/depositphotos_32355547-stock-photo-busy-street-in-the-city.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/images-2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/scooter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/traffic-2251530_640.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/upload_images.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/404Error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/image.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/images_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/images_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/css/login_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/annotation_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/annotation_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/edit_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/edit_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/image_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/mask.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/mask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/task.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +50,7 @@
         <item name="app" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="mask: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="task: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -231,7 +168,7 @@
       <workItem from="1579603299319" duration="120608000" />
       <workItem from="1580144995741" duration="1691000" />
       <workItem from="1580146997411" duration="6498000" />
-      <workItem from="1580155669586" duration="13479000" />
+      <workItem from="1580155669586" duration="20084000" />
     </task>
     <servers />
   </component>
