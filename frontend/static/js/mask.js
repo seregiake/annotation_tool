@@ -9,7 +9,7 @@ let outlineImage,
     colorLayerData,
     outlineLayerData,
     mask = [],
-    kernel, dist, ratio,
+    mask_id, kernel, dist, ratio,
     outline_matrix = [],
     cluster_id,
     clusterList = [],
@@ -29,20 +29,20 @@ function initMask() {
     ann_color_box = document.getElementById("ann_color");
     mask_color_box = document.getElementById("mask_color");
 
-    console.log('http://localhost:5000/masks/' + user_id + '/' + image_id);
+    console.log('http://localhost:5000/masks/' + user_id + '/' + image_id + '/' + superclass_id);
     // getJSON request to take the annotations from the server and draw it on the canvas
     $.getJSON(
-        'http://localhost:5000/masks/' + user_id + '/' + image_id, function (data) {
+        'http://localhost:5000/masks/' + user_id + '/' + image_id + '/' + superclass_id, function (data) {
             console.log(data);
             // console.log(data['valid']);
 
-            if (data['valid'] == 'Y'){
+            if (data != 'Mask doesn\'t exist'){
                 // console.log(data);
 
                 kernel = data['kernel'];
                 dist = data['dist'];
                 ratio = data['ratio'];
-
+                mask_id = data['id'];
                 mask = JSON.parse(data['mask']);
 
                 // takes mask_boundaries and draws them in the outline layer (3° canvas)
@@ -96,8 +96,14 @@ function initMask() {
 function createMask() {
 
     let message = "If you confirm the previous mask it will be lost. Are you sure?";
+    let dest_url = 'http://localhost:5000/masks/' + user_id + '/' + image_id + '/' + superclass_id,
+        type = "PUT";
+
+    // if the mask still does not exist --> POST request
     if (!checkResourcesLoaded()){
         message = "Press OK to create a new mask.";
+        dest_url = 'http://localhost:5000/masks/' + user_id;
+        type = "POST";
     }
 
     if (confirm(message)) {
@@ -109,6 +115,7 @@ function createMask() {
 
         let newData = {
             "id": image_id,
+            "super": superclass_id,
             "ratio" : r,
             "kernel" : k,
             "dist": d
@@ -120,8 +127,8 @@ function createMask() {
 
         // post data on server
         $.ajax({
-            url: "http://localhost:5000/masks/" + user_id ,
-            type: "post",
+            url: dest_url ,
+            type: type,
             // The key needs to match your method's input parameter (case-sensitive).
             data: dataJson,
             dataType: "json",
@@ -135,6 +142,7 @@ function createMask() {
                 kernel = data['kernel'];
                 dist = data['dist'];
                 ratio = data['ratio'];
+                mask_id = data['id'];
 
                 mask = JSON.parse(data['mask']);
 
@@ -223,6 +231,7 @@ function redrawMask() {
 
         }
 
+        /*
         let up, down, prev, next;
         let first = false, last = false;
         for (let i = 0; i < len; i += 4 ){
@@ -253,6 +262,8 @@ function redrawMask() {
                 outlineImage[i + 3] = 0;   // a
             }
         }
+
+         */
 
         // draw the outline layer in the 3° canvas
         ctx3.putImageData(outlineLayerData, 0, 0 );

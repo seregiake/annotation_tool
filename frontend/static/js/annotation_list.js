@@ -52,43 +52,26 @@ function initAnnotation(){
 
 function  drawAnnotation() {
     $.getJSON(
-        'http://localhost:5000/annotations/' + user_id, function (data) {
+        'http://localhost:5000/annotations/' + mask_id, function (data) {
             console.log(data);
-            // console.log(data.ANNOTATIONS);
             form_name.innerHTML = "";
-            console.log('Object.keys(data)[0]: ' + Object.keys(data)[0]);
-            console.log('Object.keys(data).length: ' + Object.keys(data).length);
 
+            for( let i = 0; i < Object.keys(data).length ; i++){
 
-            for( let i = 0; i <Object.keys(data).length ; i++){
-                let data_key = Object.keys(data)[i];
-                // console.log(image_id);
-                // console.log(data[i]);
-                // console.log(data[i]['image_id']);
+                let color = JSON.parse(data[i]['color']);
 
-                if (data[data_key]['image_id'] == image_id ){
+                clusterList = JSON.parse(data[i]['cluster']);
+                pointList = JSON.parse(data[i]['point']);
 
-                    // console.log(data[i]['image_id']);
+                while(clusterList.length != 0){
+                    let [x, y] = pointList.pop();
+                    clusterList.pop();
 
-                    let color = JSON.parse(data[data_key]['color']);
-                    // console.log("color" + color);
-
-                    clusterList = JSON.parse(data[data_key]['cluster_id']);
-                    pointList = JSON.parse(data[data_key]['point']);
-
-                    while(clusterList.length != 0){
-                        let [x, y] = pointList.pop();
-                        clusterList.pop();
-
-                        floodFill(x, y, 0, 0, 0, 0, [color[0], color[1], color[2], 128]);
-                        redraw();
-                    }
-
-                    // console.log(data[data_key]['category_id']);
-                    // console.log("clusterList: " + clusterList + ", pointList: " + pointList);
-                    createAnnotation(data[data_key]['id'], color, data[data_key]['category_id']);
-
+                    floodFill(x, y, 0, 0, 0, 0, [color[0], color[1], color[2], 128]);
+                    redraw();
                 }
+
+                createAnnotation(data[i]['id'], color, data[i]['sub_id']);
 
 
             }
@@ -117,10 +100,13 @@ function createAnnotation(id, rgb_color, category_id){
     color.disabled = true;
     color.value = rgbToHex(rgb_color[0], rgb_color[1], rgb_color[2]);
 
-    let select = document.getElementById("category");
+    let select = document.getElementById('ann_class');
+    // let category_id = select.selectedIndex;
+    // let category_value = select.value;
+
     let ann_text;
     for( let i = 1; i < select.length ; i++){
-        let choose = document.getElementById(i.toString());
+        let choose = document.getElementById(i);
         if (choose.value == category_id){
             ann_text = choose.label;
         }
@@ -144,9 +130,9 @@ function createAnnotation(id, rgb_color, category_id){
 function saveAnnotation() {
     if (checkResourcesLoaded()){
 
-        let category = document.getElementById("category");
-        let category_id = category.options[category.selectedIndex].id;
-        let category_value = category.options[category.selectedIndex].value;
+        let select = document.getElementById('ann_class');
+        let category_id = select.selectedIndex;
+        let category_value = select.value;
 
         console.log(category_id);
 
@@ -158,11 +144,10 @@ function saveAnnotation() {
         console.log("saveAnnotation");
 
         let newData = {
-            "image_id": image_id,
             "category_id" : category_value,
             "multiple" : 0,
-            "counts": JSON.stringify([]),
-            "size": JSON.stringify([]),
+            "count": JSON.stringify([0, 0]),
+            "size": JSON.stringify([0, 0]),
             "cluster_id": JSON.stringify(clusterList),
             "point": JSON.stringify(pointList),
             "color": JSON.stringify([curColor[0], curColor[1], curColor[2]])
@@ -175,11 +160,11 @@ function saveAnnotation() {
         let dest_url, type;
 
         if(edit){ //PUT
-            dest_url = "http://localhost:5000/annotations/" + user_id + "/" + ann_id;
+            dest_url = "http://localhost:5000/annotations/" + mask_id + "/" + ann_id;
             type = "PUT";
 
         } else { //POST
-            dest_url = "http://localhost:5000/annotations/" + user_id ;
+            dest_url = "http://localhost:5000/annotations/" + mask_id ;
             type = "POST";
         }
 
@@ -206,7 +191,7 @@ function saveAnnotation() {
                     drawAnnotation();
                     return;
                 } else{
-                    createAnnotation(data["id"], JSON.parse(data["color"]), data["category_id"]);
+                    createAnnotation(data["id"], JSON.parse(data["color"]), data["sub_id"]);
                 }
 
             }
@@ -224,8 +209,8 @@ function saveAnnotation() {
 }
 
 function clearAnnotation(){
-    let category = document.getElementById("category");
-    category.selectedIndex = 0;
+    let select = document.getElementById('ann_class');
+    select.selectedIndex = 0;
 
     ann_button.value = rgbToHex(255, 0, 0);
 }
@@ -260,7 +245,7 @@ function editAnnotation() {
 
     if (checkedElement()){
         $.getJSON(
-            'http://localhost:5000/annotations/'+ user_id + '/' + ann_id, function (data) {
+            'http://localhost:5000/annotations/'+ mask_id + '/' + ann_id, function (data) {
                 console.log("editAnnotation");
                 edit = true;
                 console.log(data);
@@ -271,19 +256,16 @@ function editAnnotation() {
                 curColor = [color[0], color[1], color[2], 128];
                 ann_color_box.value = rgbToHex(color[0], color[1], color[2]);
 
-                let category = document.getElementById("category");
-                for( let i = 1; i < category.length ; i++){
+                let select = document.getElementById('ann_class');
+                for( let i = 1; i < select.length ; i++){
                     let choose = document.getElementById(i.toString());
-                    if (choose.value == data['category_id']){
-                        category.selectedIndex = i;
+                    if (choose.value == data['sub_id']){
+                        select.selectedIndex = i;
                     }
                 }
 
-                clusterList = JSON.parse(data['cluster_id']);
+                clusterList = JSON.parse(data['cluster']);
                 pointList = JSON.parse(data['point']);
-
-
-
 
             }
         ).error(function(jqXHR, textStatus, errorThrown) {
@@ -313,7 +295,7 @@ function delAnnotation() {
 
     if (checkedElement()) {
         $.ajax({
-            url: 'http://localhost:5000/annotations/' + user_id + '/' + ann_id,
+            url: 'http://localhost:5000/annotations/' + mask_id + '/' + ann_id,
             type: "DELETE",
             contentType: "application/json"
 
@@ -346,10 +328,14 @@ function checkedElement(){
 
     for (let i = 0; i <form_name.elements.length; i++) {
         if (form_name.elements[i].checked) {
+            // console.log("ann_id: " + form_name.elements[i].id);
+            // console.log("ann_id: " + form_name.elements[i].value);
             ann_id = form_name.elements[i].id;
             console.log("ann_id: " + ann_id);
+
         }
     }
+
 
     return true;
 }

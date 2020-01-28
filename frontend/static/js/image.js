@@ -1,13 +1,13 @@
 let image_id,
-    cat_id,
-    contex,
+    ctx,
     canvasWidth = 0,
     canvasHeight = 0,
     backgroundImage = new Image(),
     totalLoadResources = 2,
-    curLoadResNum = 0;
+    curLoadResNum = 0,
+    superclass_id;
 
-let user_id = 0;
+let user_id = 1;
 
 window.onload = function () {
 
@@ -80,19 +80,20 @@ function init(){
     // extracts the image id from the url
     let url_string = window.location.href;
     let url = new URL(url_string);
-    let id = url.searchParams.get("image");
-    image_id = id;
+    image_id = url.searchParams.get("i");
+    superclass_id = url.searchParams.get("s");
+
+    console.log(superclass_id);
 
     // get background_canvas and its context
     let canvas = document.getElementById("background_canvas");
-    contex = canvas.getContext("2d");
+    ctx = canvas.getContext("2d");
 
     // getJSON request to take the image from the server and draw it on the canvas
     $.getJSON(
         'http://localhost:5000/images/'+ image_id, function (data) {
             console.log(data);
             console.log(data["url"]);
-            cat_id = data["category"];
 
             backgroundImage.src = data["url"];
             backgroundImage.onload = () => {
@@ -103,7 +104,7 @@ function init(){
                 canvas.width = backgroundImage.width;
                 canvas.height = backgroundImage.height;
 
-                contex.drawImage(backgroundImage, 0, 0);
+                ctx.drawImage(backgroundImage, 0, 0);
             }
             curLoadResNum ++;
         }
@@ -121,12 +122,10 @@ function init(){
 
 function displayCategories() {
     $.getJSON(
-        'http://localhost:5000/categories', function (data) {
+        'http://localhost:5000/categories/' + superclass_id, function (data) {
             console.log(data);
-            let cat = data["category"]
-            console.log(data["category"]);
 
-            let select = document.getElementById('category');
+            let select = document.getElementById('ann_class');
             let option = document.createElement("option");
             option.id = "0";
             option.value = "0";
@@ -134,18 +133,13 @@ function displayCategories() {
             select.append(option);
 
             let index = 0;
-            for( let i = 0; i < Object.keys(cat).length; i++){
-                let cat_key = Object.keys(cat)[i];
-                if ( cat[cat_key]["super_id"] == cat_id){
-                    index = index + 1;
-                    option = document.createElement("option");
-                    option.id = index;
-                    option.value = cat[cat_key]["id"];
-                    option.label =  cat[cat_key]["name"];
-                    select.append(option);
-
-                }
-
+            for( let i = 0; i < Object.keys(data).length; i++){
+                index = index + 1;
+                option = document.createElement("option");
+                option.id = index;
+                option.value = data[i]["id"];
+                option.label =  data[i]["name"];
+                select.append(option);
             }
 
         }
@@ -159,9 +153,6 @@ function checkResourcesLoaded(){
     }
     return true;
 }
-
-
-
 
 
 

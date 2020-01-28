@@ -2,62 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/create_ann.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/create_mask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/data/annotations.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/data/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/data/images.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/data/masks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/data/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/mask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/01HUMANE-articleLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/110964876.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/abbandono-cani-gatti-conigli-pesci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/animali-nella-fattoria.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/bfe0bffdbcad85598a18f6d40ac983a5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/cavallo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/ea2cf4bc-da85-485b-b136-49219f7768ff.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/farm-animals-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/farm-animals.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/huhn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/smallpets.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Animals/stock_shelburne_farms_burlington_vermont_2017aug13_0132banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/4923.fruit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/come-fare-maturare-frutta.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/fruit_selection_155265101_web.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/fruits_feature.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/images.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Fruit/zuccheri_frutta_salute.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/310px-Řím,_autobusy_a_motorky_na_semaforu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/Citt-moderna-strada-strada-trafficata-studio-fotografico-sfondi-bambini-del-bambino-foto-di-sfondo-sfondo-fotografia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/autobus-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/copertina.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/depositphotos_32355547-stock-photo-busy-street-in-the-city.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/images-2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/images.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/scooter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/static/Transports/traffic-2251530_640.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/upload_images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/css/login_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/static/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/annotation_tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/annotation_tool.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/signin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/static/js/task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/annotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/annotation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/boundaries.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/boundaries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/segmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/annotation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/boundaries.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/category.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/create_ann.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/create_mask.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/data/annotations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/data/images.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/data/masks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/data/users.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/mask.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/segmentation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/01HUMANE-articleLarge.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/110964876.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/abbandono-cani-gatti-conigli-pesci.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/animali-nella-fattoria.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/bfe0bffdbcad85598a18f6d40ac983a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/cavallo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/ea2cf4bc-da85-485b-b136-49219f7768ff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/farm-animals-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/farm-animals.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/huhn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/smallpets.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Animals/stock_shelburne_farms_burlington_vermont_2017aug13_0132banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/4923.fruit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/come-fare-maturare-frutta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/fruit_selection_155265101_web.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/fruits_feature.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/images.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Fruit/zuccheri_frutta_salute.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/310px-Řím,_autobusy_a_motorky_na_semaforu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/Citt-moderna-strada-strada-trafficata-studio-fotografico-sfondi-bambini-del-bambino-foto-di-sfondo-sfondo-fotografia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/autobus-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/copertina.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/depositphotos_32355547-stock-photo-busy-street-in-the-city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/images-2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/images.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/scooter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/Transports/traffic-2251530_640.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/static/img/IMG8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/upload_images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/404Error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/home.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/image.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/images_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/images_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/css/login_style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/annotation_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/annotation_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/home.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/image_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image_list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/mask.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/mask.js" afterDir="false" />
@@ -67,6 +80,43 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="mask: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,15 +137,23 @@
   </component>
   <component name="ProjectId" id="1WOHjZyHomqZvuS41ryzLQLOnBM" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/database" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/database" />
+      <recent name="$PROJECT_DIR$/backend/app/resources" />
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend/src/static" />
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/backend/app" />
+      <recent name="$PROJECT_DIR$/backend/models" />
+      <recent name="$PROJECT_DIR$/backend/db" />
+      <recent name="$PROJECT_DIR$/frontend" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -110,14 +168,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.login.html">
-    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/home.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.prova.html">
+    <configuration name="admin_home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/admin_home.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="images_list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/images_list.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/login.html" useBuiltInWebServerPort="true">
+    <configuration name="prova.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/prova.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="signin.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/signin.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="task.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/task.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -142,31 +206,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="annotation_tool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.login.html" />
-        <item itemvalue="JavaScript Debug.home.html" />
-        <item itemvalue="Python.app" />
+        <item itemvalue="JavaScript Debug.prova.html" />
+        <item itemvalue="JavaScript Debug.signin.html" />
+        <item itemvalue="JavaScript Debug.admin_home.html" />
         <item itemvalue="JavaScript Debug.images_list.html" />
+        <item itemvalue="JavaScript Debug.task.html" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +227,11 @@
       <option name="presentableId" value="Default" />
       <updated>1579013856825</updated>
       <workItem from="1579013858239" duration="46569000" />
-      <workItem from="1579188802574" duration="107759000" />
+      <workItem from="1579188802574" duration="107933000" />
+      <workItem from="1579603299319" duration="120608000" />
+      <workItem from="1580144995741" duration="1691000" />
+      <workItem from="1580146997411" duration="6498000" />
+      <workItem from="1580155669586" duration="13479000" />
     </task>
     <servers />
   </component>

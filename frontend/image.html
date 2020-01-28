@@ -13,12 +13,49 @@
     </head>
     <body id = "myBody">
 
-        <nav aria-label="breadcrumb" >
-          <ol class="breadcrumb" style="background-color: midnightblue" >
-            <li class="breadcrumb-item" ><a href="home.html" style="color: white">Home</a></li>
-              <li class="breadcrumb-item"><a href="#" style="color: white">Image</a></li>
-          </ol>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: midnightblue;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation" style="background-color: white">
+              <span class="navbar-toggler-icon" ></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: white">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: white">Profile </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" style="color: midnightblue" href="" id="create">Create or Edit Tasks</a>
+                            <a class="dropdown-item" style="color: midnightblue" href="#" id="choose">Choose a Task</a>
+
+                            <!--
+                            <a class="dropdown-item" style="color: midnightblue" href="#">Take Results</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" style="color: midnightblue" href="#">Something else here</a>
+                            -->
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="logout()" style="color: white" href="#">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
         </nav>
+
+        <a onclick="logout()" style="color: white">Logout</a>
 
 
         <div class="container" >
@@ -48,13 +85,19 @@
 
                                 <div class="col-md-4 mb-3">
                                     <label for="kernel">Kernel:</label>
-                                    <input type="number" class="form-control" min="0" value="0" id="kernel">
+                                    <input type="number" class="form-control" min="0" value="0" id="kernel"
+                                           data-toggle="tooltip" data-placement="bottom"
+                                           title="Kernel: Width of Gaussian kernel used in smoothing the sample density. Higher means fewer clusters.">
                                 </div> <div class="col-md-4 mb-3">
                                     <label for="dist">Max-dist:</label>
-                                    <input type="number" class="form-control" min="0" value="10" id="dist">
+                                    <input type="number" class="form-control" min="0" value="10" id="dist"
+                                           data-toggle="tooltip" data-placement="bottom"
+                                           title="Max-dist: Cut-off point for data distances. Higher means fewer clusters.">
                                 </div> <div class="col-md-4 mb-3">
                                     <label for="ratio">Ratio:</label>
-                                    <input type="number" class="form-control" min="0" step="0.5" value="0" id="ratio">
+                                    <input type="number" class="form-control" min="0" step="0.1" max="1" value="0" id="ratio"
+                                           data-toggle="tooltip" data-placement="bottom"
+                                           title="Ratio: (between 0 and 1). Balances color-space proximity and image-space proximity. Higher values give more weight to color-space.">
                                 </div>
 
                             </div>
@@ -124,7 +167,7 @@
                                 <div style="width:20%;">
                                     <input type="color" id="ann_color" value="#ff0000">
                                 </div> <div style="width:50%;">
-                                    <select id="category" style="width:100%;">
+                                    <select id="ann_class" style="width:100%;">
 
                                     </select>
                                 </div> <div style="width:2%;"> </div>
@@ -143,7 +186,6 @@
                     </div>
 
                     <div class="col">
-                        <p>Qui si vedranno le annotazioni salvate</p>
                         <form id = "check_form">
 
 

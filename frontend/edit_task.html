@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,15 +38,10 @@
                             Actions
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" style="color: midnightblue" href="" id="create">Create or Edit Tasks</a>
-                            <a class="dropdown-item" style="color: midnightblue" href="#" id="choose">Choose a Task</a>
-
-                            <!--
+                            <a class="dropdown-item" style="color: midnightblue" href="#">Create or Edit Tasks</a>
                             <a class="dropdown-item" style="color: midnightblue" href="#">Take Results</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" style="color: midnightblue" href="#">Something else here</a>
-                            -->
-
                         </div>
                     </li>
 
@@ -55,18 +53,35 @@
             </div>
         </nav>
 
-        <a onclick="logout()" style="color: white">Logout</a>
+        <div class="container" style="padding: 2rem; height: 600px; align-content: center;">
+            <div class="d-flex justify-content-center h-100" style="width:100%;align-items: center;">
+                <div>
+                    <h1 id="welcome"></h1>
+                    <label for="dataset">Choose dataset:</label>
+                    <div class="form-row" style="width:80%;">
+                        <div  style="width:80%;">
+                            <select onchange="selectChange()" class="form-control" id="dataset">
+                                <option id="0" value="0"></option>
+                                <option id="1" value="1" label="Dataset1"></option>
+                                <option id="2" value="2" label="Dataset2"></option>
+                                <option id="3" value="3" label="Dataset3"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="form-row" style="width:80%;">
+                    <div  style="width:80%;" id="superclass">
 
-        <div class="container" style="padding: 2rem">
-
-        <div class="card-deck" id="card-deck" >
-            <div class="row" id="row0">
-
+                    </div><div style="width:5%;">
+                    </div>
+                </div>
+                    <br>
+                    <button href="#" onclick="saveTask()" hidden="true" id="btn-save">Salva</button>
+                </div>
             </div>
 
         </div>
 
-        </div>
 
         <footer style="background-color: midnightblue; padding: 3px" >
             <p></p>
@@ -78,6 +93,6 @@
         <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
 
-        <script type="text/javascript" src="static/js/image_list.js"></script>
+        <script type="text/javascript" src="static/js/home.js"></script>
     </body>
 </html>

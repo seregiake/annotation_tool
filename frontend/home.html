@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,28 +16,64 @@
     </head>
     <body>
 
-        <nav aria-label="breadcrumb" >
-          <ol class="breadcrumb" style="background-color: midnightblue" >
-            <li class="breadcrumb-item" ><a href="#" style="color: white">Home</a></li>
-          </ol>
-        </nav>
-        <div class="container" style="padding: 2rem">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: midnightblue;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation" style="background-color: white">
+              <span class="navbar-toggler-icon" ></span>
+            </button>
 
-            <div class="form-row" style="width: 15rem">
-                <label for="category">Choose Category</label>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: white">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: white">Profile </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdown-menu">
+                            <a class="dropdown-item" style="color: midnightblue" href="#" id="choose">Choose a Task</a>
+
+                            <!--
+                            <a class="dropdown-item" style="color: midnightblue" href="#">View your progress</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" style="color: midnightblue" href="#">Something else here</a>
+                            -->
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="logout()" style="color: white" href="#">Logout</a>
+                    </li>
+
+                </ul>
             </div>
+        </nav>
 
-            <div class="form-row" style="width: 15rem">
-                <div  style="width:80%;">
-                    <select class="form-control" id="category">
+        <div class="container" style="padding: 2rem; height: 600px; align-content: center;">
+            <div class="d-flex justify-content-center h-100" style="width:100%;align-items: center;">
+                <div>
+                    <h1 id="welcome" style="font-family: Tahoma; color: midnightblue;"></h1>
+                    <br>
+                    <p>Choose what you want to do:</p>
+
+                    <select class="form-control" id="selected">
+                        <option id="1" value="1" label="Choose a Task"></option>
+                        <!--
+                        <option id="2" value="2" label="View your progress"></option>
+                        -->
                     </select>
-                </div><div style="width:10%;">
-                </div><div style="width:10%;">
-                    <button href="#" onclick="sendCategory()" style="border-radius: 50%;">></button>
+                     <br>
+                    <button onclick="nextPage()">Continue</button>
                 </div>
             </div>
-
-
         </div>
 
         <footer style="background-color: midnightblue; padding: 3px" >
@@ -47,6 +86,7 @@
         <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
 
+        <script type="text/javascript" src="static/js/login.js"></script>
         <script type="text/javascript" src="static/js/home.js"></script>
     </body>
 </html>
