@@ -231,40 +231,6 @@ function redrawMask() {
 
         }
 
-        /*
-        let up, down, prev, next;
-        let first = false, last = false;
-        for (let i = 0; i < len; i += 4 ){
-            if (i < canvasWidth){
-                next = outlineImage[i + 4];
-                down = outlineImage[i + canvasWidth * 4];
-                first = true;
-                if (i != 0){
-                    prev = outlineImage[i - 4];
-                    first = false;
-                }
-            } else if (i > len - 1 - canvasWidth){
-                prev = outlineImage[i - 4];
-                up = outlineImage[i - canvasWidth * 4];
-                last = true;
-                if (i != len - 1) {
-                    next = outlineImage[i + 4];
-                    last = false;
-                }
-            }
-            let pixel = outlineImage[i];
-            if (!first && !last &&
-                pixel == up && pixel == down && pixel == prev && pixel == next){
-                // console.log("cancellato");
-                outlineImage[i] = 0;       // r
-                outlineImage[i + 1] = 0;   // g
-                outlineImage[i + 2] = 0;   // b
-                outlineImage[i + 3] = 0;   // a
-            }
-        }
-
-         */
-
         // draw the outline layer in the 3° canvas
         ctx3.putImageData(outlineLayerData, 0, 0 );
 
@@ -328,8 +294,19 @@ function dragOver(e) {
         prev_cluster = mask[prev_y][prev_x];
         cluster = mask[y][x];
 
+        let diff_cluster = true;
+        for (let i = 0; i < draggedPointList.length-1; i++){
+            let [sel_x, sel_y] = draggedPointList[i];
+            let sel_cluster = mask[sel_y][sel_x];
+            console.log(sel_x + sel_y + sel_cluster);
+            if (sel_cluster == cluster){
+                diff_cluster = false;
+                console.log('same cluster');
+            }
+        }
+
         // add new pixel only if it has different cluster_id
-        if (cluster != prev_cluster){
+        if (cluster != prev_cluster && diff_cluster){
 
             // check if new pixel in on the mask
             if (!matchOutlineBorder((y * canvasWidth + x) * 4)){

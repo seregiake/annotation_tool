@@ -4,13 +4,7 @@
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/edit_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/edit_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/image_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/mask.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/mask.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +162,7 @@
       <workItem from="1579603299319" duration="120608000" />
       <workItem from="1580144995741" duration="1691000" />
       <workItem from="1580146997411" duration="6498000" />
-      <workItem from="1580155669586" duration="20084000" />
+      <workItem from="1580155669586" duration="21285000" />
     </task>
     <servers />
   </component>
