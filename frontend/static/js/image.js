@@ -13,10 +13,6 @@ window.onload = function () {
 
     init();
 
-    // initAnnotation();
-
-    // controllare se esiste la maschera, se non esiste o è invalida
-    // rendere non cliccabile il pusante displayMask
 
     /*
 
@@ -64,8 +60,6 @@ window.onload = function () {
 
 
      */
-
-    //Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black
 
 };
 
@@ -156,5 +150,12 @@ function checkResourcesLoaded(){
     return true;
 }
 
+function logout() {
+    let message = "Are you sure you want to logout?";
+    if (confirm(message)) {
+        window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
+    }
+
+}
 
 

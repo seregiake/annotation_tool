@@ -100,3 +100,11 @@ function createCardBody(id, name) {
     card_body.appendChild(card_text);
     return card_body;
 }
+
+function logout(){
+    let message = "Are you sure you want to logout?";
+    if (confirm(message)) {
+        window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
+    }
+
+}
