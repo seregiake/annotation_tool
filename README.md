@@ -6,4 +6,4 @@ In particular Flask-RESTful, extension of the Flask framework, was used for the 
 - Install Python3 and git.
 - From the terminal open the `backend` folder.
 - Run `Flask run` to start the server.
-- Open `http://localhost:63342/annotation_tool/frontend/home.html` on your web browser to run the client.
+- Open `http://localhost:63342/annotation_tool/frontend/signin.html` on your web browser to run the client.
