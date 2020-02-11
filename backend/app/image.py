@@ -1,6 +1,6 @@
 from flask import jsonify
 from flask_restful import Resource, abort
-from app.models import Image
+from app.models import Image, Task
 from app import db
 
 
@@ -19,6 +19,18 @@ class ImagesSchema(Resource):
 
     def post(self):
         pass
+
+class ImagesTaskSchema(Resource):
+    def get(self, task_id):
+        task = Task.query.get(task_id).to_dict()
+        data = [image.to_dict() for image in db.session.query(Image).filter(Image.folder_name == task['folder_name'])]
+        j_data = jsonify(data)
+        return j_data
+        pass
+
+    def post(self):
+        pass
+
 
 
 class ImageSchema(Resource):

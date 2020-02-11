@@ -48,18 +48,34 @@ class UserSchema(Resource):
         pass
 
     def put(self, user_id):
-        json_data = request.get_json(force=True)
-        email = json_data['email']
-        password = json_data['password']
-        data = db.session.query(User).filter(User.id == user_id)
-        data = data.all()[0]
-        data.set_password(password)
-        data.email = email
-        db.session.commit()
-
-        return data, 201
+        # TODO modifica password
         pass
 
     def delete(self, user_id):
         # TODO quando elimini utente elimina anche tutte le maschere e annotazioni fatte
+        pass
+
+
+class RegistrationSchema(Resource):
+    def get(self):
+        pass
+    
+    def post(self):
+        json_data = request.get_json(force=True)
+        username = json_data['username']
+        email = json_data['email']
+        password1 = json_data['password1']
+        password2 = json_data['password2']
+
+        if password1 == password2:
+            newUser = User(username=username, email=email)
+            newUser.set_password(password1)
+
+            db.session.add(newUser)
+            db.session.commit()
+
+            data = db.session.query(User).filter(User.username == username)
+            data = data.all()[0].to_dict()
+            return data, 201
+        return 'different password', 400
         pass

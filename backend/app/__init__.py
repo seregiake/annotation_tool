@@ -17,11 +17,11 @@ CORS(app)
 
 api = Api(app)
 
-from app.image import ImageSchema, ImagesSchema
+from app.image import ImageSchema, ImagesSchema, ImagesTaskSchema
 from app.mask import MaskSchema, MasksSchema
 from app.annotation import AnnotationSchema, AnnotationsSchema
 from app.category import SuperclassesSchema, SuperclassSchema
-from app.user import UsersSchema, UserSchema
+from app.user import UsersSchema, UserSchema, RegistrationSchema
 from app.task import TasksSchema, TaskSchema
 
 from app.security import authenticate, identity
@@ -39,7 +39,9 @@ def customized_response_handler(access_token, identity):
 
 
 api.add_resource(ImagesSchema, '/images')
-api.add_resource(ImageSchema, '/images/<int:image_id>')
+api.add_resource(ImagesTaskSchema, '/images/<int:task_id>')
+
+api.add_resource(ImageSchema, '/image/<int:image_id>')
 
 api.add_resource(MasksSchema, '/masks/<int:user_id>')
 api.add_resource(MaskSchema, '/masks/<int:user_id>/<int:image_id>/<int:super_id>')
@@ -51,6 +53,7 @@ api.add_resource(SuperclassesSchema, '/categories')
 api.add_resource(SuperclassSchema, '/categories/<int:super_id>')
 
 api.add_resource(UsersSchema, '/users')
+api.add_resource(RegistrationSchema, '/registration')
 api.add_resource(UserSchema, '/users/<int:user_id>')
 
 api.add_resource(TasksSchema, '/tasks')
