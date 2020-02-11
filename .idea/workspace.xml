@@ -81,6 +81,7 @@
   </component>
   <component name="ProjectId" id="1WOHjZyHomqZvuS41ryzLQLOnBM" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/database" />
