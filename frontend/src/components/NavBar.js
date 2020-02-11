@@ -7,11 +7,11 @@ class NavBar extends Component {
     render() {
         return (
             <Navbar style={{ backgroundColor:'rgb(25, 25, 112)', color:'white' }}>
-                <Navbar.Brand href="#home" style={{ color:'white' }}>Navbar</Navbar.Brand>
+                <Navbar.Brand href="#home" style={{ color:'white' }}>Annotation Tool</Navbar.Brand>
                 <Nav className="mr-auto" >
                     <Nav.Link href="/" style={{ color:'white' }}>Home</Nav.Link>
                     <Separator />
-                    <Nav.Link href="/about" style={{ color:'white' }}>Informations</Nav.Link>
+                    <Nav.Link href="/about" style={{ color:'white' }}>Profile</Nav.Link>
                     <Separator />
                     <Nav.Link href="/tasks" style={{ color:'white' }}>Tasks</Nav.Link>
                 </Nav>

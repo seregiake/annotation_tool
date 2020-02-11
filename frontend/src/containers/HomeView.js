@@ -3,11 +3,9 @@ class HomeView extends Component {
     render() {
         return (
             <div>
-                <h1>Pagina iniziale</h1>
-                <p>Benvenuto nella pagina iniziale.</p>
+                <h1>Welcome </h1>
                 <p>
-                    Fai clic sul menu per selezionare la
-                    pagina da visualizzare.
+                    Clic on menu bar to choose what you want to do
                 </p>
             </div>
         );
