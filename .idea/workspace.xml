@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/edit_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/edit_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/image.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/images_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/images_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/edit_task.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/edit_task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/static/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/image_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/mask.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/mask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/profile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +169,7 @@
       <workItem from="1580146997411" duration="6498000" />
       <workItem from="1580155669586" duration="22176000" />
       <workItem from="1580305133019" duration="32000" />
+      <workItem from="1581421449620" duration="2860000" />
     </task>
     <servers />
   </component>

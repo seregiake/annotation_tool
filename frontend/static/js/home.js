@@ -19,6 +19,14 @@ window.onload = function () {
                 a2.setAttribute('class', 'dropdown-item');
                 a2.innerText = 'Create or Edit Tasks';
                 div.append(a2);
+
+                let select = document.getElementById('selected');
+                let option = document.createElement('option');
+                option.id = "2";
+                option.value = "2";
+                option.label = "Create or Edit Tasks";
+                select.append(option);
+
             }
 
         }
@@ -30,13 +38,14 @@ window.onload = function () {
 }
 
 function nextPage() {
-    // TODO legge l'operazione richiesta ed esegue di conseguenza
-    // let select = document.getElementById('selected');
-    window.location.href = "http://localhost:63342/annotation_tool/frontend/task.html";
+    let select = document.getElementById('selected');
+    if (select.value == "1"){
+        window.location.href = "http://localhost:63342/annotation_tool/frontend/task.html";
+    } else {
+        window.location.href = "http://localhost:63342/annotation_tool/frontend/edit_task.html";
+    }
 
 }
-
-
 
 
 function logout(){

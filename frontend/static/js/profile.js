@@ -38,6 +38,13 @@ function  editUser() {
     let psw1 = document.getElementById('psw1').value;
     let psw2 = document.getElementById('psw2').value;
 
+    console.log(email);
+    console.log(psw1);
+    console.log(psw2);
+    let newemail = email;
+    let pswchange = false;
+
+
     if (email == oldEmail && psw1=='' && psw2==''){
         alert('No changes made');
         return
@@ -48,14 +55,18 @@ function  editUser() {
     }
 
     if (psw1 == psw2 && psw1 != ''){
-        let user = {
-            "email": email,
-            "password" : psw1
-        };
+        pswchange = true;
+    }
 
-        // turns data format into JSON
-        let dataJson = JSON.stringify(user);
-        console.log(dataJson);
+    let user = {
+        "email": newemail,
+        "pswchange": pswchange,
+        "password" : psw1
+    };
+
+    // turns data format into JSON
+    let dataJson = JSON.stringify(user);
+    console.log(dataJson);
 
     $.ajax({
             url: 'http://localhost:5000/users/' + user_id ,
@@ -64,19 +75,13 @@ function  editUser() {
             data: dataJson,
             dataType: "json",
             contentType: "application/json"
+    }).done(
+        function(data){
+            console.log(data);
+            alert("New profile settings successfully registered!")
 
-        }).done(
-            function(data){
-                console.log(data);
-                alert("New profile settings successfully registered!")
-
-            }
-        );
-
-
-    }
-
-
+        }
+    );
 
 
 }

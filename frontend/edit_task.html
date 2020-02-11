@@ -58,31 +58,25 @@
         </nav>
 
         <div class="container" style="padding: 2rem; height: 600px; align-content: center;">
-            <div class="d-flex justify-content-center h-100" style="width:100%;align-items: center;">
-                <div>
+            <col class="d-flex justify-content-center h-100" style="width:100%;align-items: center;">
+                <div style="padding: 2rem; width:100%;">
                     <h1 id="welcome"></h1>
                     <label for="dataset">Choose dataset:</label>
-                    <div class="form-row" style="width:80%;">
-                        <div  style="width:80%;">
-                            <select onchange="selectChange()" class="form-control" id="dataset">
-                                <option id="0" value="0"></option>
-                                <option id="1" value="1" label="Dataset1"></option>
-                                <option id="2" value="2" label="Dataset2"></option>
-                                <option id="3" value="3" label="Dataset3"></option>
-                            </select>
-                        </div>
-                    </div>
+                    <select style="padding: 2rem; width:400px;" onchange="selectChange()" class="form-control" id="dataset">
+                        <option id="0" value="0"></option>
+                        <option id="1" value="1" label="Dataset1"></option>
+                        <option id="2" value="2" label="Dataset2"></option>
+                        <option id="3" value="3" label="Dataset3"></option>
+                    </select>
                     <br><br>
-                    <div class="form-row" style="width:80%;">
-                    <div  style="width:80%;" id="superclass">
+                    <div  style="padding-left: 5rem;width:80%;" id="superclass">
 
-                    </div><div style="width:5%;">
                     </div>
-                </div>
+
                     <br>
-                    <button href="#" onclick="saveTask()" hidden="true" id="btn-save">Salva</button>
+                    <button style="margin-left: 5rem;" href="#" onclick="saveTask()" hidden="true" id="btn-save">Salva</button>
                 </div>
-            </div>
+            </col>
 
         </div>
 

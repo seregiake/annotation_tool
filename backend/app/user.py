@@ -50,13 +50,15 @@ class UserSchema(Resource):
     def put(self, user_id):
         json_data = request.get_json(force=True)
         email = json_data['email']
+        change_psw = json_data['pswchange']
         password = json_data['password']
         data = db.session.query(User).filter(User.id == user_id)
         data = data.all()[0]
-        data.set_password(password)
+        if change_psw:
+            data.set_password(password)
         data.email = email
         db.session.commit()
-
+        data = data.to_dict()
         return data, 201
         pass
 
