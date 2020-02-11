@@ -48,7 +48,16 @@ class UserSchema(Resource):
         pass
 
     def put(self, user_id):
-        # TODO modifica password
+        json_data = request.get_json(force=True)
+        email = json_data['email']
+        password = json_data['password']
+        data = db.session.query(User).filter(User.id == user_id)
+        data = data.all()[0]
+        data.set_password(password)
+        data.email = email
+        db.session.commit()
+
+        return data, 201
         pass
 
     def delete(self, user_id):

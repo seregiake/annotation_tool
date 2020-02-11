@@ -29,6 +29,7 @@ function initMask() {
     ann_color_box = document.getElementById("ann_color");
     mask_color_box = document.getElementById("mask_color");
 
+
     console.log('http://localhost:5000/masks/' + user_id + '/' + image_id + '/' + superclass_id);
     // getJSON request to take the annotations from the server and draw it on the canvas
     $.getJSON(
@@ -78,6 +79,7 @@ function initMask() {
                 top_canvas.addEventListener('dragstart', dragStart);
                 top_canvas.addEventListener('dragover', dragOver);
                 top_canvas.addEventListener('dragend', dragEnd);
+
 
             } else {
                 alert('There is no mask yet, enter settings and press Create Mask to create one')
@@ -181,59 +183,6 @@ function createMask() {
     } else {
       console.log("You pressed Cancel!");
     }
-
-}
-
-function redrawMask() {
-
-        takeSelectedColor(mask_color_box);
-
-        // set kernel, dist, ratio as the settings of the last mask created
-        let k = document.getElementById("kernel"),
-            d = document.getElementById("dist"),
-            r = document.getElementById("ratio");
-
-        k.value = kernel;
-        d.value = dist;
-        r.value = ratio;
-
-        // takes mask_boundaries and draws them in the outline layer (3° canvas)
-        let outline_canvas = document.getElementById('outline-canvas');
-        let ctx3 = outline_canvas.getContext("2d");
-
-        outline_canvas.width = canvasWidth;
-        outline_canvas.height = canvasHeight;
-        // console.log("canvasWidth: " + canvasWidth + ", canvasHeight: " + canvasHeight);
-
-        outlineLayerData = ctx3.createImageData(canvasWidth, canvasHeight);
-        outlineImage = outlineLayerData.data;
-
-        // scroll the matrix with boundaries to create the outline image
-        let len = outlineLayerData.data.length;
-        // console.log(len);
-        let col = 0, row = 0;
-        let pixel = [];
-        for (let i = 0; i < len && row < canvasHeight; i += 4 ){
-            pixel = outline_matrix[row][col];
-            // console.log("pixel: " + pixel);
-            if (pixel[0] == "0"){
-                outlineImage[i] = outlineColor[0];       // r
-                outlineImage[i + 1] = outlineColor[1];   // g
-                outlineImage[i + 2] = outlineColor[2];   // b
-                outlineImage[i + 3] = outlineColor[3];   // a
-            }
-            if (col == canvasWidth - 1){
-                row ++;
-                col = 0;
-            } else {
-                col++;
-            }
-
-        }
-
-        // draw the outline layer in the 3° canvas
-        ctx3.putImageData(outlineLayerData, 0, 0 );
-
 
 }
 
@@ -599,30 +548,78 @@ function changeOpacity(id, text_id){
 
     let opacity_value = Math.round(((opacity.value * 255)/100));
 
-    setAlpha(id, opacity_value);
+    // TODO controlla se outlineLayer e colorLayer esistono
+    //  effettuare la modifica dell'opacità da qui!!!!
+
+    if (id == "opacity"){
+        // modify outlineLayer
+        console.log("modify outlineLayer opacity: " + opacity_value );
+        outlineColor[3] = opacity_value;
+        redrawMask();
+
+
+    } else {
+        // modify all colored areas in colorLayer
+        console.log("modify colorLayer opacity: " + opacity_value );
+        curColor[3] = opacity_value;
+    }
 
     // la modifica sulla barra dell'opacità deve modificare l'alfa nei
     // layer corrispondenti o colorLayer outlineLayer
 }
 
-function setAlpha(id, opacity){
-    // TODO controlla se outlineLayer e colorLayer esistono
-    //  effettuare la modifica dell'opacità da qui!!!!
 
-    if (id == "opacity"){
-        if (outlineColor[3] == 0){
+function redrawMask() {
+
+        takeSelectedColor(mask_color_box);
+
+        // set kernel, dist, ratio as the settings of the last mask created
+        let k = document.getElementById("kernel"),
+            d = document.getElementById("dist"),
+            r = document.getElementById("ratio");
+
+        k.value = kernel;
+        d.value = dist;
+        r.value = ratio;
+
+        // takes mask_boundaries and draws them in the outline layer (3° canvas)
+        let outline_canvas = document.getElementById('outline-canvas');
+        let ctx3 = outline_canvas.getContext("2d");
+
+        outline_canvas.width = canvasWidth;
+        outline_canvas.height = canvasHeight;
+        // console.log("canvasWidth: " + canvasWidth + ", canvasHeight: " + canvasHeight);
+
+        outlineLayerData = ctx3.createImageData(canvasWidth, canvasHeight);
+        outlineImage = outlineLayerData.data;
+
+        // scroll the matrix with boundaries to create the outline image
+        let len = outlineLayerData.data.length;
+        // console.log(len);
+        let col = 0, row = 0;
+        let pixel = [];
+        for (let i = 0; i < len && row < canvasHeight; i += 4 ){
+            pixel = outline_matrix[row][col];
+            // console.log("pixel: " + pixel);
+            if (pixel[0] == "0"){
+                outlineImage[i] = outlineColor[0];       // r
+                outlineImage[i + 1] = outlineColor[1];   // g
+                outlineImage[i + 2] = outlineColor[2];   // b
+                outlineImage[i + 3] = outlineColor[3];   // a
+            }
+            if (col == canvasWidth - 1){
+                row ++;
+                col = 0;
+            } else {
+                col++;
+            }
 
         }
-        // modify outlineLayer
-        console.log("modify outlineLayer opacity: " + opacity );
-        outlineColor[3] = opacity;
+
+        // draw the outline layer in the 3° canvas
+        ctx3.putImageData(outlineLayerData, 0, 0 );
 
 
-    } else {
-        // modify all colored areas in colorLayer
-        console.log("modify colorLayer opacity: " + opacity );
-        curColor[3] = opacity;
-    }
 }
 
 

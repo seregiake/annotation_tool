@@ -36,8 +36,10 @@ function tryLogin() {
             console.log(data);
             auth = data['access_token'];
             user_id = data['user_id'];
+            localStorage.setItem('token', data['access_token']);
+            localStorage.setItem('user_id', data['user_id']);
 
-            window.location.href = 'http://localhost:63342/annotation_tool/frontend/home.html?u=' + user_id;
+            window.location.href = 'http://localhost:63342/annotation_tool/frontend/home.html';
 
 
         }
@@ -55,6 +57,8 @@ function tryLogin() {
 function logout(){
     let message = "Are you sure you want to logout?";
     if (confirm(message)) {
+        localStorage.removeItem('user_id');
+        localStorage.removeItem('token');
         window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
     }
 

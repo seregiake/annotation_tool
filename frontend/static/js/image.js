@@ -10,10 +10,7 @@ let image_id,
 let user_id;
 
 window.onload = function () {
-
     init();
-
-
     /*
 
     - init():  funzione che prende l'elemento canvas,
@@ -72,7 +69,8 @@ function init(){
     // let url = new URL(url_string);
     let url_string = window.location.href;
     let url = new URL(url_string);
-    user_id = url.searchParams.get("u");
+    user_id = localStorage.getItem('user_id');
+    console.log('localStorage: ' + localStorage.getItem('user_id'));
     image_id = url.searchParams.get("i");
     superclass_id = url.searchParams.get("s");
 
@@ -94,8 +92,8 @@ function init(){
                 canvasWidth = backgroundImage.width;
                 canvasHeight = backgroundImage.height;
 
-                canvas.width = backgroundImage.width;
-                canvas.height = backgroundImage.height;
+                ctx.canvas.width = backgroundImage.width;
+                ctx.canvas.height = backgroundImage.height;
 
                 ctx.drawImage(backgroundImage, 0, 0);
             }
@@ -150,12 +148,13 @@ function checkResourcesLoaded(){
     return true;
 }
 
-function logout() {
+function logout(){
     let message = "Are you sure you want to logout?";
     if (confirm(message)) {
+        localStorage.removeItem('user_id');
+        localStorage.removeItem('token');
         window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
     }
 
 }
-
 

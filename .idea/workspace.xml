@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/edit_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/edit_task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/images_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/images_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/edit_task.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/edit_task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/image_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/image_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/mask.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/mask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/static/js/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/task.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,16 +87,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend/database" />
-      <recent name="$PROJECT_DIR$/backend/app/resources" />
-      <recent name="$PROJECT_DIR$/frontend" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/backend/app" />
       <recent name="$PROJECT_DIR$/backend/models" />
       <recent name="$PROJECT_DIR$/backend/db" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/database" />
+      <recent name="$PROJECT_DIR$/backend/app/resources" />
       <recent name="$PROJECT_DIR$/frontend" />
     </key>
   </component>
@@ -97,20 +112,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.prova.html">
+  <component name="RunManager" selected="JavaScript Debug.profile.html">
     <configuration name="admin_home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/admin_home.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="images_list.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/images_list.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="profile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/profile.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="prova.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/prova.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="signin.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/signin.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="task.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/annotation_tool/frontend/task.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -137,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.profile.html" />
         <item itemvalue="JavaScript Debug.prova.html" />
         <item itemvalue="JavaScript Debug.signin.html" />
         <item itemvalue="JavaScript Debug.admin_home.html" />
         <item itemvalue="JavaScript Debug.images_list.html" />
-        <item itemvalue="JavaScript Debug.task.html" />
       </list>
     </recent_temporary>
   </component>
