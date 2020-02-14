@@ -10,7 +10,7 @@ window.onload = function () {
             if(data['admin']){
                 let div = document.getElementById('dropdown-menu');
                 let a2 = document.createElement('a');
-                a2.href="http://localhost:63342/annotation_tool/frontend/edit_task.html";
+                a2.href="edit_task.html";
                 a2.style="color: midnightblue";
                 a2.id="create";
                 a2.setAttribute('class', 'dropdown-item');
@@ -22,7 +22,7 @@ window.onload = function () {
     );
 
     let a = document.getElementById('choose');
-    a.href="http://localhost:63342/annotation_tool/frontend/task.html";
+    a.href="task.html";
 }
 
 function init(){
@@ -201,7 +201,12 @@ function logout(){
     if (confirm(message)) {
         localStorage.removeItem('user_id');
         localStorage.removeItem('token');
-        window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
+
+        let stringa = window.location.href;
+        let elimina = new RegExp("\edit_task.html");
+        stringa = stringa.replace(elimina, "");
+
+        window.location.href = stringa + 'signin.html';
     }
 
 }

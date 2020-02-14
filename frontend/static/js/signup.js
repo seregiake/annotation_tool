@@ -48,8 +48,11 @@ function registerUser(){
         }).done(
             function(data){
                 console.log(data);
-                alert("New user successfully registered!")
-                window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
+                alert("New user successfully registered!");
+                let stringa = window.location.href;
+                let elimina = new RegExp("\signup.html");
+                stringa = stringa.replace(elimina, "");
+                window.location.href = stringa + 'signin.html';
 
             }
         );

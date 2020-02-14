@@ -91,7 +91,11 @@ function logout(){
     if (confirm(message)) {
         localStorage.removeItem('user_id');
         localStorage.removeItem('token');
-        window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
+        let stringa = window.location.href;
+        let elimina = new RegExp("\profile.html");
+        stringa = stringa.replace(elimina, "");
+
+        window.location.href = stringa + 'signin.html';
     }
 
 }

@@ -39,7 +39,13 @@ function tryLogin() {
             localStorage.setItem('token', data['access_token']);
             localStorage.setItem('user_id', data['user_id']);
 
-            window.location.href = 'http://localhost:63342/annotation_tool/frontend/home.html';
+            let stringa = window.location.href;
+            let elimina = new RegExp("\signin.html");
+            stringa = stringa.replace(elimina, "");
+            console.log(stringa);
+
+
+            window.location.href = stringa + 'home.html';
 
 
         }
@@ -59,7 +65,12 @@ function logout(){
     if (confirm(message)) {
         localStorage.removeItem('user_id');
         localStorage.removeItem('token');
-        window.location.href = 'http://localhost:63342/annotation_tool/frontend/signin.html';
+        let stringa = window.location.href;
+        let elimina = new RegExp("\signin.html");
+        stringa = stringa.replace(elimina, "");
+        console.log(stringa);
+
+        window.location.href = stringa + 'signin.html';
     }
 
 }
