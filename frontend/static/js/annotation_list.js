@@ -141,13 +141,73 @@ function saveAnnotation() {
             return;
         }
 
+
+        let col = 0, row = 0;
+        let colored_pixels = 0, white_pixels = 0;
+        let cons_color = 0, cons_white = 0;
+        let same_cluster = false;
+        let count = [];
+
+        while (col < canvasWidth && row < canvasHeight) {
+            //console.log(mask[row][col]);
+            let mask_cluster = mask[row][col];
+            let found = false;
+            for (let i=0; i < clusterList.length; i ++){
+                if (mask_cluster == clusterList[i]){
+                    found = true;
+                    if (same_cluster == false){
+                        count.push(cons_white);
+                        console.log(cons_white);
+                        cons_white = 0;
+                        colored_pixels++;
+                        same_cluster = true;
+                        cons_color ++;
+                    } else {
+                        colored_pixels++;
+                        same_cluster = true;
+                        cons_color ++;
+                    }
+                }
+            }
+
+            if (!found){
+                if (same_cluster == true){
+                    count.push(cons_color);
+                    console.log(cons_color);
+                    cons_color = 0;
+                    white_pixels++;
+                    same_cluster = false;
+                    cons_white ++;
+                } else {
+                    white_pixels++;
+                    same_cluster = false;
+                    cons_white ++;
+                }
+            }
+
+            if (col == canvasWidth - 1) {
+                if(row != canvasHeight - 1){
+                    row++;
+                    col = 0;
+                    console.log('fine riga');
+
+                }
+                else {
+                    col ++;
+                }
+
+            } else {
+                col++;
+            }
+        }
+
         console.log("saveAnnotation");
 
         let newData = {
             "category_id" : category_value,
             "multiple" : 0,
-            "count": JSON.stringify([0, 0]),
-            "size": JSON.stringify([0, 0]),
+            "count": JSON.stringify(count),
+            "size": JSON.stringify([white_pixels, colored_pixels]),
             "cluster_id": JSON.stringify(clusterList),
             "point": JSON.stringify(pointList),
             "color": JSON.stringify([curColor[0], curColor[1], curColor[2]])
@@ -196,6 +256,7 @@ function saveAnnotation() {
 
             }
         );
+
 
         clearAnnotation();
         // leggi colore, zone selezionate, categoria, salva

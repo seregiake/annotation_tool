@@ -2,6 +2,8 @@ window.onload = function () {
     user_id = localStorage.getItem('user_id');
     console.log('localStorage: ' + localStorage.getItem('user_id'));
 
+    init();
+
     $.getJSON(
         'http://localhost:5000/users/' + user_id , function (data) {
             console.log(data);
@@ -21,6 +23,50 @@ window.onload = function () {
 
     let a = document.getElementById('choose');
     a.href="http://localhost:63342/annotation_tool/frontend/task.html";
+}
+
+function init(){
+
+    let dataset_list = [];
+
+    $.getJSON(
+        'http://localhost:5000/images', function (data) {
+            //console.log(data);
+
+            for( let i = 0; i < Object.keys(data).length; i++){
+                if (dataset_list.length == 0){
+                    dataset_list.push(data[i]["dataset"]);
+                    //console.log(dataset_list);
+                } else {
+                    let found = false;
+                    for (let j = 0; j < dataset_list.length; j++){
+                        if (data[i]["dataset"] == dataset_list[j]){
+                            found = true;
+                        }
+                    }
+                    if (!found){
+                        dataset_list.push(data[i]["dataset"]);
+                    }
+                }
+            }
+
+            console.log(dataset_list);
+
+            let select = document.getElementById('dataset');
+            let i = 1;
+            while (dataset_list.length != 0){
+                let option = document.createElement('option');
+                option.id = i;
+                option.value = i;
+                option.label = dataset_list.pop();
+                select.append(option);
+                i = i + 1;
+            }
+
+
+        }
+    );
+
 }
 
 function selectChange() {

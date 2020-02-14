@@ -8,6 +8,7 @@ from app.models import Image, Superclass, Subclass
 def uploadImages():
     main_folder = os.listdir('app/static')
     for folder in main_folder:
+        #if folder == 'Dataset4':
         if folder != '.DS_Store':
             images = os.listdir('app/static/' + folder)
             for image in images:
