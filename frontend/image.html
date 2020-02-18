@@ -60,7 +60,9 @@
         <div class="container" >
 
             <div class="row" id="main-container" style="border-radius: 20px; padding:0.5em; background-color: midnightblue">
-                    <div id="canvases_div" class="overflow-auto" style="position:relative;min-width:100%; min-height:800px; ">
+                    <div id="canvases_div" class="overflow-auto" style="position:relative;min-width:800px; min-height:800px; margin-top: auto; margin-right: auto;margin-bottom: 0;margin-left: auto;">
+                        <!-- position:relative;min-width:100%; min-height:800px; -->
+
                         <canvas id="background_canvas" style="z-index: 1;position:absolute;left:0px;top:0px;">
                             Sorry, your browser doesn't support the &lt;canvas&gt; element.
                         </canvas>
@@ -135,7 +137,7 @@
                         <div class="form-row" style="width: 15rem">
                             <div class="col">
                                 <label for="mask_color">Color:</label>
-                                <input type="color" id="mask_color" value="#000000">
+                                <input type="color" onchange="redrawMask()" id="mask_color" value="#000000">
                             </div>
                         </div>
 

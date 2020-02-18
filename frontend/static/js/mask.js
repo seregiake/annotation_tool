@@ -247,10 +247,10 @@ function dragOver(e) {
         for (let i = 0; i < draggedPointList.length-1; i++){
             let [sel_x, sel_y] = draggedPointList[i];
             let sel_cluster = mask[sel_y][sel_x];
-            console.log(sel_x + sel_y + sel_cluster);
+            //console.log(sel_x + sel_y + sel_cluster);
             if (sel_cluster == cluster){
                 diff_cluster = false;
-                console.log('same cluster');
+                //console.log('same cluster');
             }
         }
 
@@ -562,12 +562,12 @@ function changeOpacity(id, text_id){
         // modify all colored areas in colorLayer
         console.log("modify colorLayer opacity: " + opacity_value );
         curColor[3] = opacity_value;
+        drawAnnotation();
     }
 
     // la modifica sulla barra dell'opacità deve modificare l'alfa nei
     // layer corrispondenti o colorLayer outlineLayer
 }
-
 
 function redrawMask() {
 

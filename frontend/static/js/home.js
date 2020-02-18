@@ -57,7 +57,7 @@ function logout(){
         let elimina = new RegExp("\home.html");
         stringa = stringa.replace(elimina, "");
 
-        window.location.href = stringa + 'signin.html';
+        window.location.href = 'signin.html';
     }
 
 }

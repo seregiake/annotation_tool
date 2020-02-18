@@ -72,6 +72,8 @@ function getImages(){
             } else if(len % 5 == 0){
                 num = 5;
             }
+
+            num = 5;
             console.log(len);
             let row=0;
             let col=0;
@@ -86,8 +88,8 @@ function getImages(){
                     let img = createImg(data[i].url, data[i].name,"card-img-top");
                     a.appendChild(img);
                     card.appendChild(a);
-                    let card_body = createCardBody(data[i].id, data[i].name);
-                    card.appendChild(card_body);
+                    // let card_body = createCardBody(data[i].id, data[i].name);
+                    // card.appendChild(card_body);
                     // console.log("row"+row);
                     document.getElementById("row" + row).append(card);
 
@@ -148,7 +150,7 @@ function logout(){
         let elimina = new RegExp("\image_list.html");
         stringa = stringa.replace(elimina, "");
 
-        window.location.href = stringa + 'signin.html';
+        window.location.href = 'signin.html';
     }
 
 }

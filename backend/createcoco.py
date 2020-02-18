@@ -1,5 +1,5 @@
-#from app import db
-from app.models import Image
+from app import db
+from app.models import Image, Subclass, Annotation, Mask
 import json
 
 # per creare la sezione info
@@ -16,7 +16,8 @@ import json
 
 # per creare la sezione licenses
 
-images = Image.query.all()
+#images = Image.query.all()
+images = Image.query.filter(Image.folder_name == "Dataset4")
 imagesList = []
 # per creare la sezione images
 for image in images:
@@ -63,6 +64,18 @@ data = {}
 data.update({'images': imagesList})
 
 # per creare la sezione categories
+categories = db.session.query(Subclass).filter(Subclass.super_id == 7)
+categoriesList = []
+# per creare la sezione images
+for cat in categories:
+    newCat = {
+        "supercategory": 'Portrait',
+        "id": cat.id,
+        "name": cat.name,
+    }
+    categoriesList.append(newCat)
+
+data.update({'categories': categoriesList})
 """
 "categories": [
     {"supercategory": "person","id": 1,"name": "person"},
@@ -77,6 +90,26 @@ data.update({'images': imagesList})
 """
 
 # per creare la sezione annotations
+annotations = Annotation.query.all()
+annotationsList = []
+# per creare la sezione images
+for ann in annotations:
+    mask = db.session.query(Mask).filter(Mask.id == ann.mask_id)
+    mask = mask.all()[0].to_dict()
+    newAnn = {
+        "segmentation": {
+            "counts": ann.count,
+            "size": ann.size
+        },
+        "iscrowd": 1,
+        "image_id": mask['image_id'],
+        "category_id": ann.sub_id,
+        "id": ann.id
+    }
+    annotationsList.append(newAnn)
+
+data.update({'annotations': annotationsList})
+
 """
 "annotations": [
     {

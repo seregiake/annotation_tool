@@ -119,7 +119,7 @@ function init(){
                 ctx.canvas.height = backgroundImage.height;
 
                 ctx.drawImage(backgroundImage, 0, 0);
-            }
+            };
             curLoadResNum ++;
 
             displayCategories();
@@ -180,7 +180,7 @@ function logout(){
         let elimina = new RegExp("\image.html");
         stringa = stringa.replace(elimina, "");
 
-        window.location.href = stringa + 'signin.html';
+        window.location.href = 'signin.html';
     }
 
 }

@@ -99,7 +99,7 @@ function logout(){
         stringa = stringa.replace(elimina, "");
         console.log(stringa);
 
-        window.location.href = stringa + 'signin.html';
+        window.location.href = 'signin.html';
     }
 
 }

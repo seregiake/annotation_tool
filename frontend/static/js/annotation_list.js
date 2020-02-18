@@ -2,7 +2,8 @@ let ann_count = 0,
     ann_button = document.getElementById('ann_button'),
     edit = false,
     ann_id,
-    form_name = document.getElementById('check_form');
+    form_name = document.getElementById('check_form'),
+    count = [];
 
 /*
 function initAnnotation(){
@@ -56,12 +57,39 @@ function  drawAnnotation() {
             console.log(data);
             form_name.innerHTML = "";
 
+            clearColorLayer();
+
             for( let i = 0; i < Object.keys(data).length ; i++){
 
                 let color = JSON.parse(data[i]['color']);
 
+
+
+                count = JSON.parse(data[i].count);
+                let k = 0;
+                for(let j = 0; j < count.length; j++){
+                    let num = count[j];
+                    if (j % 2 == 0){ // se è una cella pari
+                        for (let h=0; h< num; h++) {
+                            k++;
+                        }
+                    }
+                    else{
+                        for (let h = 0; h < num; h++) {
+                            colorPixel(k * 4, color[0], color[1], color[2], curColor[3]);
+
+                            k++;
+                        }
+
+                    }
+                }
+
+                redraw();
+
+                /*
                 clusterList = JSON.parse(data[i]['cluster']);
                 pointList = JSON.parse(data[i]['point']);
+
 
                 while(clusterList.length != 0){
                     let [x, y] = pointList.pop();
@@ -70,6 +98,7 @@ function  drawAnnotation() {
                     floodFill(x, y, 0, 0, 0, 0, [color[0], color[1], color[2], 128]);
                     redraw();
                 }
+                 */
 
                 createAnnotation(data[i]['id'], color, data[i]['sub_id']);
 
@@ -143,11 +172,15 @@ function saveAnnotation() {
 
 
         let col = 0, row = 0;
-        let colored_pixels = 0, white_pixels = 0;
-        let cons_color = 0, cons_white = 0;
-        let same_cluster = false;
+        let colored_pixels = 0, white_pixels = 0; //conta colorati e bianchi totali
+        let cons_color = 0, cons_white = 0; //conta colorati e bianchi consecutivi
+        // let same_cluster = false;
         let count = [];
+        let save_white = true; //salva i bianchi
+        let save_colored = false; //salva i colorati
 
+
+        /*
         while (col < canvasWidth && row < canvasHeight) {
             //console.log(mask[row][col]);
             let mask_cluster = mask[row][col];
@@ -157,7 +190,7 @@ function saveAnnotation() {
                     found = true;
                     if (same_cluster == false){
                         count.push(cons_white);
-                        console.log(cons_white);
+                        //console.log(cons_white);
                         cons_white = 0;
                         colored_pixels++;
                         same_cluster = true;
@@ -171,9 +204,10 @@ function saveAnnotation() {
             }
 
             if (!found){
+
                 if (same_cluster == true){
                     count.push(cons_color);
-                    console.log(cons_color);
+                    //console.log(cons_color);
                     cons_color = 0;
                     white_pixels++;
                     same_cluster = false;
@@ -183,13 +217,15 @@ function saveAnnotation() {
                     same_cluster = false;
                     cons_white ++;
                 }
+
+
             }
 
             if (col == canvasWidth - 1) {
                 if(row != canvasHeight - 1){
                     row++;
                     col = 0;
-                    console.log('fine riga');
+                    //console.log('fine riga');
 
                 }
                 else {
@@ -201,6 +237,96 @@ function saveAnnotation() {
             }
         }
 
+
+
+        while (col < canvasWidth && row < canvasHeight) {
+            //console.log(mask[row][col]);
+            let mask_cluster = mask[row][col];
+            let found = false;
+            for (let i=0; i < clusterList.length; i ++){
+                if (mask_cluster == clusterList[i]){
+                    found = true;
+                    if (save_white){
+                        count.push(cons_white);
+                        save_white = false;
+                        cons_white = 1;
+                        colored_pixels = 1;
+                        cons_color = 1;
+                        save_colored = true;
+                    } else {
+                        colored_pixels ++;
+                        cons_color ++;
+                    }
+                }
+            }
+
+            if (!found){
+                if(save_colored){
+                    count.push(cons_color);
+                    save_colored = false;
+                    cons_color = 1;
+                    white_pixels = 1;
+                    cons_white = 1;
+                    save_white = true;
+
+                } else {
+                    white_pixels ++;
+                    cons_white ++;
+                }
+
+            }
+
+            if (col == canvasWidth - 1) {
+                if(row != canvasHeight - 1){
+                    row++;
+                    col = 0;
+                    //console.log('fine riga');
+
+                }
+                else {
+                    col ++;
+                }
+
+            } else {
+                col++;
+            }
+        }
+         */
+
+        for(let i = 0; i< colorImage.length; i = i + 4){
+            if (colorImage[i] == curColor[0]
+                && colorImage[i + 1] == curColor[1]
+                && colorImage[i + 2] == curColor[2]){
+                if (save_white){
+                        count.push(cons_white);
+                        save_white = false;
+                        cons_white = 0;
+                        cons_color = 1;
+                        save_colored = true;
+                        colored_pixels = colored_pixels + 1
+                } else {
+                    colored_pixels = colored_pixels + 1 ;
+                    cons_color = cons_color + 1 ;
+                }
+            } else {
+                if(save_colored){
+                    count.push(cons_color);
+                    save_colored = false;
+                    cons_color = 0;
+                    cons_white = 1;
+                    save_white = true;
+                    white_pixels = white_pixels + 1;
+
+                } else {
+                    white_pixels = white_pixels + 1;
+                    cons_white = cons_white + 1;
+                }
+            }
+
+        }
+
+        let size = [white_pixels, colored_pixels];
+        console.log('size: ' + size);
         console.log("saveAnnotation");
 
         let newData = {
