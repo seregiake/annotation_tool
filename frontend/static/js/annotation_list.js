@@ -294,21 +294,20 @@ function saveAnnotation() {
          */
 
         for(let i = 0; i< colorImage.length; i = i + 4){
-            if (colorImage[i] == curColor[0]
-                && colorImage[i + 1] == curColor[1]
-                && colorImage[i + 2] == curColor[2]){
-                if (save_white){
-                        count.push(cons_white);
-                        save_white = false;
-                        cons_white = 0;
-                        cons_color = 1;
-                        save_colored = true;
-                        colored_pixels = colored_pixels + 1
-                } else {
-                    colored_pixels = colored_pixels + 1 ;
-                    cons_color = cons_color + 1 ;
-                }
-            } else {
+            if (colorImage[i] == curColor[0] && colorImage[i + 1] == curColor[1] && colorImage[i + 2] == curColor[2]){
+                    if (save_white){
+                            count.push(cons_white);
+                            save_white = false;
+                            cons_white = 0;
+                            cons_color = 1;
+                            save_colored = true;
+                            colored_pixels = colored_pixels + 1
+                    } else {
+                        colored_pixels = colored_pixels + 1 ;
+                        cons_color = cons_color + 1 ;
+                    }
+            }
+            else {
                 if(save_colored){
                     count.push(cons_color);
                     save_colored = false;
@@ -322,7 +321,9 @@ function saveAnnotation() {
                     cons_white = cons_white + 1;
                 }
             }
-
+        }
+        if(save_white){
+            count.push(cons_white);
         }
 
         let size = [white_pixels, colored_pixels];
