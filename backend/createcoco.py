@@ -96,10 +96,12 @@ annotationsList = []
 for ann in annotations:
     mask = db.session.query(Mask).filter(Mask.id == ann.mask_id)
     mask = mask.all()[0].to_dict()
+    image = db.session.query(Image).filter(Image.id == mask['image_id'])
+    image = image.all()[0]
     newAnn = {
         "segmentation": {
             "counts": ann.count,
-            "size": ann.size
+            "size": [image.width, image.height]
         },
         "iscrowd": 1,
         "image_id": mask['image_id'],

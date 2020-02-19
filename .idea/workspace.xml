@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/createcoco.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/createcoco.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/prova.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/prova.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +177,8 @@
       <workItem from="1580305133019" duration="32000" />
       <workItem from="1581421449620" duration="2860000" />
       <workItem from="1581777449408" duration="19218000" />
-      <workItem from="1582122229053" duration="595000" />
+      <workItem from="1582122229053" duration="7636000" />
+      <workItem from="1582141800937" duration="1016000" />
     </task>
     <servers />
   </component>
