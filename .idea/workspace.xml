@@ -4,8 +4,8 @@
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/primooutput.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/static/js/annotation_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/js/annotation_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/prova.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/prova.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +176,8 @@
       <workItem from="1580155669586" duration="22176000" />
       <workItem from="1580305133019" duration="32000" />
       <workItem from="1581421449620" duration="2860000" />
-      <workItem from="1581777449408" duration="16823000" />
+      <workItem from="1581777449408" duration="19218000" />
+      <workItem from="1582122229053" duration="303000" />
     </task>
     <servers />
   </component>
