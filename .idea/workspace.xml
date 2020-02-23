@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/createcoco.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/createcoco.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/prova.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/prova.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/output3.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +44,7 @@
         <item name="app" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="annotation: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="app" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="mask: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="alembic_version: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -80,6 +72,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -178,7 +171,8 @@
       <workItem from="1581421449620" duration="2860000" />
       <workItem from="1581777449408" duration="19218000" />
       <workItem from="1582122229053" duration="7636000" />
-      <workItem from="1582141800937" duration="1016000" />
+      <workItem from="1582141800937" duration="3413000" />
+      <workItem from="1582456627145" duration="917000" />
     </task>
     <servers />
   </component>
