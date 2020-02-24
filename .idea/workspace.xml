@@ -4,7 +4,6 @@
     <list default="true" id="d69a0992-9754-46d0-ab0d-95ddcf03f1d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/output3.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
         <item name="alembic_version: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="subclass: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -172,7 +178,8 @@
       <workItem from="1581777449408" duration="19218000" />
       <workItem from="1582122229053" duration="7636000" />
       <workItem from="1582141800937" duration="3413000" />
-      <workItem from="1582456627145" duration="917000" />
+      <workItem from="1582456627145" duration="970000" />
+      <workItem from="1582531536321" duration="420000" />
     </task>
     <servers />
   </component>
